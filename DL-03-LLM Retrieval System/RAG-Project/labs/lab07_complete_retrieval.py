@@ -20,12 +20,12 @@ import config
 from src.retriever import Retriever
 
 # Questions for testing the retrieval system 
-# (covering multiple categories in the data) 
+# (covering multiple AI/RAG categories in the data) 
 SAMPLE_QUERIES = [
-    "ถุงยางอนามัยแตกต้องทำยังไง",
-    "PrEP กับ PEP ต่างกันยังไง",
-    "ควรตรวจโรคติดต่อทางเพศสัมพันธ์บ่อยแค่ไหน",
-    "ความยินยอมในเรื่องเพศคืออะไร",
+    "RAG แก้ปัญหาอะไรของ LLM และทำไมถึงนิยมใช้",
+    "FAISS คืออะไร และใช้อัลกอริทึมอะไรในการค้นหา",
+    "AI Agent ทำงานแบบ ReAct Pattern อย่างไร",
+    "Fine-tuning ต่างจาก Prompt Engineering อย่างไร",
 ]
 
 def main():
