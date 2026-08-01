@@ -37,7 +37,7 @@ def main():
       #  print("Please run lab01_extract_text.py -> lab04_create_vector_db.py first.")
         return
 
-    print("--- RAG System for AI & Computer Science Knowledge Base ---")
+    print("--- RAG System for Astronomy & Space Exploration Knowledge Base 🌌 ---")
     print("--- Enter ('exit', 'quit', or 'q' to quit) ---\n")
 
 

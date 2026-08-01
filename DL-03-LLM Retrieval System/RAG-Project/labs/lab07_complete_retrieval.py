@@ -20,12 +20,12 @@ import config
 from src.retriever import Retriever
 
 # Questions for testing the retrieval system 
-# (covering multiple AI/RAG categories in the data) 
+# (covering multiple astronomy categories in the data) 
 SAMPLE_QUERIES = [
-    "RAG แก้ปัญหาอะไรของ LLM และทำไมถึงนิยมใช้",
-    "FAISS คืออะไร และใช้อัลกอริทึมอะไรในการค้นหา",
-    "AI Agent ทำงานแบบ ReAct Pattern อย่างไร",
-    "Fine-tuning ต่างจาก Prompt Engineering อย่างไร",
+    "หลุมดำเกิดได้อย่างไร และทำไมแม้แต่แสงก็หนีไม่ได้",
+    "กล้องเจมส์เว็บบ์ (JWST) ต่างจากกล้องฮับเบิลอย่างไร",
+    "สสารมืด กับ พลังงานมืด คืออะไร และต่างกันอย่างไร",
+    "ทำไมดาวศุกร์ถึงเป็นดาวเคราะห์ที่ร้อนที่สุดในระบบสุริยะ",
 ]
 
 def main():
