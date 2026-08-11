@@ -39,9 +39,8 @@ def main():
     # if edit dataset and forget build 
     index_meta.warn_if_stale()
 
-    print("--" * 30)
-    print("Sexual Health Question Answering System")
-    print("--" * 30)
+    print("--- RAG System for Astronomy & Space Exploration Knowledge Base 🌌 ---")
+    print("--- Enter ('exit', 'quit', or 'q' to quit) ---\n")
 
     rag = RAGPipeline()
     #rag.show_settings()
