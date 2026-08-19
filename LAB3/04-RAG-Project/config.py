@@ -60,6 +60,7 @@ EMBEDDING_MODEL_NAME = "paraphrase-multilingual-MiniLM-L12-v2"
 TOP_K = 3               # ส่งกี่ chunk ให้ LLM เขียนคำตอบ
 CANDIDATE_K = 20        # ดึง TOP_K
 RRF_K = 60              # ค่าคงที่ของสูตร RRF 
+MIN_DENSE_SCORE = 0.35  # คะแนน dense ต่ำสุดที่ยอมรับ (0-1) ถ้าต่ำกว่านี้ถือว่าไม่เกี่ยวข้อง
 
 RERANK_MODEL_NAME = "BAAI/bge-reranker-v2-m3"   # ใช้เมื่อ USE_RERANK = True
 

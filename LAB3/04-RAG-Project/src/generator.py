@@ -41,20 +41,29 @@ class LLM:
 
 class NoLLM:
 
-    model = "don't use LLM"
+    model = "no-llm (คืนข้อมูลที่ค้นเจอโดยตรง)"
 
     def chat(self, messages):
         user_message = messages[-1]["content"]
 
-        # ดึงเนื้อหาบล็อก [1] ออกมาจาก prompt
-        parts = user_message.split("reference data :")
+        # ดึงเนื้อหาบล็อกอ้างอิงออกมาจาก prompt
+        parts = user_message.split("ข้อมูลอ้างอิง:")
         if len(parts) < 2:
             return config.NO_CONTEXT_MESSAGE
 
-        context = parts[1].split("Q of user")[0].strip()
-        first_block = context.split("\n\n")[0].replace("[1]", "").strip()
+        context = parts[1].split("คำถามของผู้ใช้:")[0].strip()
 
-        return f"{first_block} [1]" if first_block else config.NO_CONTEXT_MESSAGE
+        # แยกแต่ละบล็อก [1], [2], ... แล้วเรียบเรียงคำตอบ
+        blocks = [b.strip() for b in context.split("\n\n") if b.strip()]
+        if not blocks:
+            return config.NO_CONTEXT_MESSAGE
+
+        # คืนบล็อกแรกที่เกี่ยวข้องที่สุด พร้อมอ้างอิง
+        answer = blocks[0]
+        # ตัดเลข [1] ที่นำหน้าออก แล้วใส่ท้ายแทน
+        if answer.startswith("[1]"):
+            answer = answer[3:].strip()
+        return f"{answer} [1]"
 
 
 def get_llm():

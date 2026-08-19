@@ -1,13 +1,13 @@
 {
   "file": {
-    "size": 30543,
-    "mtime": 1786460530
+    "size": 58068,
+    "mtime": 1787104273
   },
   "settings": {
     "CHUNK_SIZE": 400,
     "CHUNK_OVERLAP": 50,
     "EMBEDDING_MODEL_NAME": "paraphrase-multilingual-MiniLM-L12-v2"
   },
-  "n_chunks": 38,
+  "n_chunks": 82,
   "source_file": "astronomy_knowledge_base.txt"
 }

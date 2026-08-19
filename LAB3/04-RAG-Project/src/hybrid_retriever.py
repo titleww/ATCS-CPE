@@ -180,6 +180,13 @@ class HybridRetriever:
             chunk["bm25_score"] = bm25_scores.get(position)
             results.append(chunk)
 
+        # กรองผลลัพธ์ที่ไม่เกี่ยวข้องออก (ต้องผ่านอย่างน้อย 1 ทาง: dense >= 0.25 หรือ bm25 >= 15.0)
+        results = [
+            r for r in results
+            if (r.get("dense_score") is not None and r["dense_score"] >= 0.25)
+            or (r.get("bm25_score") is not None and r["bm25_score"] >= 15.0)
+        ]
+
         #  จัดอันดับใหม่
         if self.reranker:
             results = self.reranker.rerank(query, results, top_k)

@@ -57,6 +57,14 @@ def main():
         if not question:
             continue
 
+        # กรองคำถามที่สั้นหรือคลุมเครือเกินไป
+        if len(question) < 5 and not any(c in question for c in "?？"):
+            print("\n💡 คำถามสั้นเกินไปครับ ลองถามให้ละเอียดขึ้น เช่น:")
+            print("   - \"ทำไมดาวอังคารมีสีแดง\"")
+            print("   - \"หลุมดำคืออะไร\"")
+            print("   - \"วงแหวนของดาวเสาร์ทำมาจากอะไร\"")
+            continue
+
         result = rag.ask(question)
         print_answer(result)
 
