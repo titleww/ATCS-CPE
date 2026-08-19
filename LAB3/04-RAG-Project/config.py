@@ -20,7 +20,7 @@ USE_RERANK = False            # จัดอันดับใหม่ด้ว
 USE_QUERY_TRANSFORM = False      # แปลงคำถามก่อนค้น — เสีย LLM เพิ่ม 1 ครั้งต่อคำถาม
 USE_MEMORY = True              # จำบทสนทนา เพื่อตอบคำถามต่อเนื่องได้
 USE_LLM = True              # False = แสดงข้อความที่ค้นได้ดิบ ๆ ไม่เรียก LLM เลย
-SHOW_SOURCES =  False        # True = แสดงรายการแหล่งอ้างอิงท้ายคำตอบ
+SHOW_SOURCES =  True        # True = แสดงรายการแหล่งอ้างอิงท้ายคำตอบ
 SHOW_DEBUG = False          # True = แสดงคะแนนและเวลาของแต่ละขั้น
 
 
