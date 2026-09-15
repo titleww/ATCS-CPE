@@ -3,7 +3,42 @@
 **วิชา:** CPE691 Advanced Topics in Computer Software  
 **ผู้พัฒนา:** นายชีวกร อาจดีหลาง (GitHub: `titleww`)  
 **ระบบที่พัฒนา:** ระบบตอบคำถามดาราศาสตร์อัจฉริยะ (Astronomy Knowledge Assistant)  
-**ที่ตั้งโค้ดระบบ:** `LAB3/04-RAG-Project/`
+**ที่ตั้งโค้ดระบบ:** `DL-04-RAG System Development I/04-RAG-Project/`
+
+---
+
+## 📁 โครงสร้างโปรเจกต์และการรันโค้ดจำลองปัญหา (Project Structure & CLI)
+
+โปรเจกต์นี้ได้รับการพัฒนาขึ้นโดยนำแนวคิด 9 ปัญหา RAG จากอาจารย์มาปรับใช้กับชุดข้อมูลจริงด้านดาราศาสตร์ (`astronomy_knowledge_base.txt`) โดยสามารถรันจำลองสถานการณ์ปัญหาแต่ละข้อได้ทันที:
+
+```text
+DL-05-RAG System Development II/
+├── astronomy_knowledge_base.txt   # คลังความรู้ดาราศาสตร์ 103 Q&A Entries
+├── data_loader.py                 # โมดูลโหลดและแยกโครงสร้างข้อมูลถาม-ตอบ
+├── main.py                        # เมนู CLI หลักสำหรับเลือกรันจำลองโจทย์ปัญหา 1-9
+├── problem01_hallucination.py     # โจทย์ที่ 1: Hallucination & Context Grounding
+├── problem02_transformer.py       # โจทย์ที่ 2: Vocabulary Mismatch & Positional Encoding
+├── problem03_data_quality.py      # โจทย์ที่ 3: Duplicate / Noise / Data Cleaning
+├── problem04_chunking.py          # โจทย์ที่ 4: Chunk Size & Overlap Strategy
+├── problem05_metadata.py          # โจทย์ที่ 5: Metadata Filtering
+├── problem06_reranking.py         # โจทย์ที่ 6: First-stage Retrieval vs Re-ranking
+├── problem07_generation.py        # โจทย์ที่ 7: Faithfulness & Number Distortion
+├── problem08_config.py            # โจทย์ที่ 8: RAG Configuration Simulator
+├── problem09_evaluation.py        # โจทย์ที่ 9: Chunk & Retrieval Evaluation
+└── README.md                      # รายงานวิเคราะห์เชิงวิศวกรรมฉบับสมบูรณ์
+```
+
+### 💻 คำสั่งสำหรับรันการจำลอง (Execution):
+```bash
+# 1. เข้าสู่โฟลเดอร์ DL-05
+cd "DL-05-RAG System Development II"
+
+# 2. รันเมนูโต้ตอบเพื่อเลือกทดสอบโจทย์ที่ 1 ถึง 9
+python main.py
+
+# หรือสั่งรันการจำลองทั้ง 9 โจทย์รวดเดียวอัตโนมัติ:
+python main.py 0
+```
 
 ---
 
